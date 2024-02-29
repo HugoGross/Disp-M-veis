@@ -12,7 +12,7 @@ const menuAberto = ref(false);
     <header>
       <div class="header--logo">
         <img src="@/assets/logo.png" alt="logo" />
-        <h1>FakeStore</h1>
+        <h1>TechGross</h1>
       </div>
       <nav>
         <ul :class="menuAberto ? 'menu' : ''">
