@@ -1,35 +1,37 @@
 <script setup>
-import { ref } from 'vue';
+  import { ref } from 'vue';
 
-import CartPlus from 'vue-material-design-icons/CartPlus.vue';
-import Account from 'vue-material-design-icons/Account.vue';
-import Menu from 'vue-material-design-icons/Menu.vue';
+  import CartPlus from 'vue-material-design-icons/CartPlus.vue';
+  import Account from 'vue-material-design-icons/Account.vue';
+  import Menu from 'vue-material-design-icons/Menu.vue';
 
-const menuAberto = ref(false);
+  const menuAberto = ref(false);
 </script>
+
 <template>
-    <header>
-      <div class="header--logo">
-        <img src="@/assets/logo.png" alt="Logo" />
-        <h1>FakeStore</h1>
-      </div>
-      <nav>
-        <ul :class="menuAberto ? 'menu' : ''">
-          <li>Home</li>
-          <li>Eletrônicos</li>
-          <li>Jóias</li>
-          <li>Masculino</li>
-          <li>Feminino</li>
-        </ul>
-      </nav>
-      <div class="header--icons">
-        <Account />
-        <CartPlus />
-        <Menu class="menu-hamburger" @click="menuAberto = !menuAberto" />
-      </div>
-    </header>
-  </template>
-  <style scoped>
+  <header>
+    <div class="header--logo">
+      <img src="@/assets/logo.png" alt="Logo" />
+      <h1>FakeStore - XS</h1>
+    </div>
+    <nav>
+      <ul :class="menuAberto ? 'menu' : ''">
+        <li>Home</li>
+        <li>Eletrônicos</li>
+        <li>Jóias</li>
+        <li>Masculino</li>
+        <li>Feminino</li>
+      </ul>
+    </nav>
+    <div class="header--icons">
+      <Account />
+      <CartPlus />
+      <Menu class="menu-hamburger" @click="menuAberto = !menuAberto" />
+    </div>
+  </header>
+</template>
+
+<style scoped>
   header {
     background: #fff;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -38,7 +40,7 @@ const menuAberto = ref(false);
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .header--logo {
     display: flex;
     align-items: center;
@@ -55,7 +57,7 @@ const menuAberto = ref(false);
   nav li {
     list-style: none;
   }
-  
+
   .header--icons {
     display: flex;
     gap: 1rem;
@@ -63,7 +65,7 @@ const menuAberto = ref(false);
   .menu-hamburger {
     display: none;
   }
-  
+
   @media (max-width: 768px) {
     nav ul {
       display: none;
@@ -71,7 +73,7 @@ const menuAberto = ref(false);
     .menu-hamburger {
       display: block;
     }
-  
+
     nav .menu {
       display: flex;
       flex-direction: column;
@@ -88,4 +90,4 @@ const menuAberto = ref(false);
       margin-top: 12px;
     }
   }
-  </style>
+</style>
