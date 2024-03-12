@@ -12,7 +12,7 @@
   <header>
     <div class="header--logo">
       <img src="@/assets/logo.png" alt="Logo" />
-      <h1>FakeStore - SM</h1>
+      <h1>TechGross - SM</h1>
     </div>
     <nav>
       <ul :class="menuAberto ? 'menu' : ''">
