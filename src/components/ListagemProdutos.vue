@@ -1,4 +1,5 @@
 <script setup>
+
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import { useScreen } from '@/composables/screen';
@@ -17,6 +18,7 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
 </script>
 
 <template>
+ 
   <div>
     <h1>
        Produtos - {{ browserWidth }} - {{ deviceWidth }}

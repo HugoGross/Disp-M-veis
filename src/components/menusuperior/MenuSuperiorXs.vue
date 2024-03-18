@@ -1,6 +1,6 @@
 <script setup>
   import { ref } from 'vue';
-
+  
   import CartPlus from 'vue-material-design-icons/CartPlus.vue';
   import Account from 'vue-material-design-icons/Account.vue';
   import Menu from 'vue-material-design-icons/Menu.vue';

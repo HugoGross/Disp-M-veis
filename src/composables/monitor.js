@@ -9,7 +9,7 @@ import {
   export function useMonitor() {
     const breakpoint = ref('sm');
     const menu = shallowRef(
-      defineAsyncComponent(() => import('../components/MenuSuperiorXs.vue')),
+      defineAsyncComponent(() => import('../components/menusuperior/MenuSuperiorXs.vue')),
     );
   
     const updateBreakpoint = () => {
@@ -17,27 +17,27 @@ import {
       if (width < 576) {
         breakpoint.value = 'xs';
         menu.value = defineAsyncComponent(() =>
-          import('../components/MenuSuperiorXs.vue'),
+          import('../components/menusuperior/MenuSuperiorXs.vue'),
         );
       } else if (width < 768) {
         breakpoint.value = 'sm';
         menu.value = defineAsyncComponent(() =>
-          import('../components/MenuSuperiorSm.vue'),
+          import('../components/menusuperior/MenuSuperiorSm.vue'),
         );
       } else if (width < 992) {
         breakpoint.value = 'md';
         menu.value = defineAsyncComponent(() =>
-          import('../components/MenuSuperiorMd.vue'),
+          import('../components/menusuperior/MenuSuperiorMd.vue'),
         );
       } else if (width < 1200) {
         breakpoint.value = 'lg';
         menu.value = defineAsyncComponent(() =>
-          import('../components/MenuSuperiorLg.vue'),
+          import('../components/menusuperior/MenuSuperiorLg.vue'),
         );
       } else {
         breakpoint.value = 'xl';
         menu.value = defineAsyncComponent(() =>
-          import('../components/MenuSuperiorXl.vue'),
+          import('../components/menusuperior/MenuSuperiorXl.vue'),
         );
       }
     };

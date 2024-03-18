@@ -1,6 +1,6 @@
 <script setup>
   import { useMonitor } from '@/composables/monitor';
-
+  
   const { menu } = useMonitor();
 </script>
 
@@ -26,20 +26,16 @@
 <style scoped>
 footer {
   display: flex;
-      flex-direction:column;
-      position: center;
-      background-color: rgba(0, 2, 121, 0.884);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-      border-radius: 10px;
-      right: 0;
-      text-align: right;
-      padding: 10px 16px;
-      align-items: center;
-      
+    justify-content:center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #EEEEEE;
+    grid-area: footer;
 }
-footer p{
-  position: center;
-  display:flex;
-  color: rgb(255, 255, 255);
+footer ul{
+  padding-right: 3rem;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
 }
 </style>
